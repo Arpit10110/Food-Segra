@@ -1,0 +1,73 @@
+.Loginuser {
+    height: 84vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161918;
+    gap: 4rem;
+}
+.LoginUser-Img{
+    width: 28%;
+}
+.LoginUser-Img img{
+    width: 100%;
+}
+.containerUserLogin {
+    background-color: #a5a5a5;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 23%;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+.Input-Address{
+    height: 12vh;
+}
+.PhoneInput {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#Otpdiv {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#Otpdiv button {
+    color: white;
+    cursor: pointer;
+    border: 1.7px solid #08ffd7;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    background-color: #000000;
+}
+.containerUserLogin input {
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    border: 3px solid black;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.containerUserLogin button {
+    color: white;
+    cursor: pointer;
+    border: 1.7px solid #00f6ff;
+    padding: 0.4rem;
+    font-size: 1.6rem;
+    border-radius: 0.8rem;
+    background-color: #0b0b0b;
+}
+@media only screen and (width<=600px) {
+    .containerUserLogin{
+        width: 75%;
+    }
+}
