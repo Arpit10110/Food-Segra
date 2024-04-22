@@ -7,6 +7,7 @@ import LoginUser from "./components/LoginUser.jsx"
 import LoginAdmin from "./components/LoginAdmin.jsx"
 import Contribute from "./components/Contribute.jsx"
 import Profile from "./components/Profile"
+import Footer from "./components/Footer.jsx"
 //styles
 import "./style/style.css"
 //importing libraray
@@ -23,6 +24,7 @@ const App = () => {
       <Route path="/LoginUser" element={<LoginUser/>}/>
       <Route path="/LoginAdmin" element={<LoginAdmin/>}/>
     </Routes>
+    <Footer/>
    </Router>
   )
 }

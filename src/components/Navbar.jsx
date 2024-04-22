@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import "../style/Nav.css"
 import menu from "../assets/menu.png"
 import close from "../assets/close.png"
+import logo from "../assets/logo.png"
 import {useSelector} from "react-redux"
 const Navbar = () => {
   const {FoodSegraLogin} = useSelector(state=>state.Local);
@@ -10,7 +11,7 @@ const Navbar = () => {
     let menuBtn=document.querySelector(".menu");
     let main=document.querySelector(".main");
     menuBtn.style="display:none;"
-    main.style="display:flex;"
+    main.style="display:flex;" 
   }
   function closefun(){
 
@@ -23,7 +24,7 @@ const Navbar = () => {
   }
   return (
     <nav className='navbar'>
-        <Link to="/"><h4 className='logoName'>Food Segra</h4></Link>
+        <Link to="/"><img className='logo' src={logo} alt="FoodSegra" /></Link>
         <main className='main'>
         <img className='close'  onClick={closefun} src={close} alt="" />
             <Link onClick={closefun} className='nava'  to="/">Home</Link>

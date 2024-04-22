@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
 .navbar {
   display: flex;
-  height: 17vh;
-  background-color: #0c1013;
+  height: 10vh;
+  background-color: #000000;
   justify-content: space-between;
   align-items: center;
 }
@@ -12,7 +12,7 @@
 .close {
   display: none;
 }
-.carticon {
+.carticon { 
   font-size: 2.1rem;
   margin: auto;
 }
@@ -25,13 +25,14 @@
   top: -1rem;
 }
 .nava {
-    color: rgb(77 255 116);
-  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
   font-family: "Croissant One", cursive;
   margin-left: 2rem;
 }
 .nava:hover {
-  color: rgb(255, 41, 63);
+  color: rgb(87, 255, 98);
+  /* text-decoration: underline; */
 }
 main {
   position: absolute;
@@ -40,12 +41,9 @@ main {
   justify-content: center;
   align-items: center;
 }
-.logoName {
-  font-size: 3rem;
-  color: #ffffed;
-  text-shadow: 1px 1px 3px #f5e4a7;
-  margin-left: 3rem;
-  font-family: "Croissant One", cursive;
+.logo{
+  width: 80%;
+  margin-left: 2rem;
 }
 .menu {
   display: none;
