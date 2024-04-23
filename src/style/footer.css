@@ -1,0 +1,54 @@
+footer {
+    padding-top: 3rem;
+    display: flex;
+    padding-bottom: 3rem;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footerUper{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    width: 45%;
+    gap: 1rem;
+}
+.footerUper img{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerUper h3{
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+.H-line{
+    width: 0.12rem;
+    background-color: #ffffff7d;
+    height: 10vh;
+}
+.partion{
+    width: 95%;
+    height: 0.11vh;
+    background-color: white;
+    margin: auto;
+}
+.footerdown{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+.copyrightDiv{
+    display: flex;
+    gap: 2rem;
+    font-weight: 100;
+}
+.copyrightDiv h3{
+    cursor: pointer;
+    font-weight: 100;
+}
+.social{
+    display: flex;
+    gap: 1rem;
+}

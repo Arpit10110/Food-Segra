@@ -1,23 +1,30 @@
 .ContriDivMain {
-  width: 100%;
   height: 90vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: 8rem;
+  padding-left: 1rem;
+}
+.ContriDivMain img{
+  border-radius: 0.5rem;
+  width: 30%;
+    height: 90vh;
 }
 .mainbox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
   gap: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 40%;
-  border: 2px solid #8080808c;
-  background-color: #ffffff26;
+  background-color: #9e939336;
   margin-top: 1rem;
   padding: 1rem;
+}
+.mainbox h2  {
+  font-weight: 100;
 }
 .boxdetail {
   display: flex;
@@ -48,28 +55,55 @@
   flex-direction: column;
   align-items: baseline;
   width: 100%;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 .foodimageUpload h3{
    margin: auto;
+   font-weight: 100;
    font-size: 1.3rem;
 }
 .SubmitContriBtn {
-  padding: 0.5rem;
-  font-weight: bold;
+  padding: 0.7rem;
   cursor: pointer;
-  border: 2px solid;
-  font-size: 1.1rem;
-  background-color: #b6b5b5;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  background-color: #05775f;
   border-radius: 1rem;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
-.custom-file-input::-webkit-file-upload-button {
-  visibility: hidden;
+.DivUpload{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
-.custom-file-input::before {
-  content: 'Select some files';
+.uploadBox{
+  position: relative;
+  width: 20%;
+  height: 15vh;
+  display: flex;
+  background-color: #ffffff63;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  font-weight: 100;
 }
-
+.uploadBox h4 {
+  font-weight: 100;
+  color: #ffffff;
+}
+input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 1rem;
+  overflow: hidden;
+  opacity: 0;
+}
 
 
 

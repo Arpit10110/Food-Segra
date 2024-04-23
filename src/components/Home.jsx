@@ -52,15 +52,46 @@ const Home = () => {
         <div className="section3">
           <h2>What we Provides to you</h2>
           <div className="cardDiv">
-            {cardData.map((i) => {
+            {cardData.map((i,index) => {
               return (
-                <div className="card">
+                <div key={index} className="card">
                   <img src={i.img} alt="" />
                   <h4>{i.title}</h4>
                   <p>{i.desc}</p>
                 </div>
               );
             })}
+          </div>
+        </div>
+        <div className="section4">
+          <h1>How we Segregate your foods</h1>
+          <div className="Section4intro">
+            <h1>Trader will check the quality of food</h1>
+            <div className="segrateOption">
+                  <div className="optionBox">
+                    <h3>Needy People</h3>
+                    <p>If that food is eatable or the quality of food is good then we should give that food to hungry people and needy people.</p>
+                  </div>
+                  <div className="optionBox">
+                    <h3>Cattles</h3>
+                    <p>If that food is not fit for human consumption then we can give that food to cattle.</p>
+                  </div>
+                  <div className="optionBox">
+                    <h3>Use as Manure</h3>
+                    <p>If that food is neither suitable for humans to eat nor for cattle to eat, then we will use that food to make manures.</p>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div className="section5">
+          <div className="subDiv">
+            <div className="subinnerDiv">
+            <h3>Subscribe to Food Segra</h3>
+            <div className="inputSubDiv">
+              <input type="Email" placeholder="Enter your Email" />
+              <button>Subscribe</button>
+            </div>
+            </div>
           </div>
         </div>
       </div>

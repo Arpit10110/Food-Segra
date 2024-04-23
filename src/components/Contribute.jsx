@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "../style/Contribute.css"
+import contriSection from "../assets/contriSection.png"
 //firbase
 import {db} from "../FirebaseConfig"
 import {addDoc,collection} from "firebase/firestore"
@@ -37,6 +38,7 @@ const Contribute = () => {
   }
   return (
     <div className='ContriDivMain'>
+      <img src={contriSection} alt="contriSection" />
       <div className="mainbox">
         <h2>Join the Contribution</h2>
         <div className="boxdetail">
@@ -54,13 +56,24 @@ const Contribute = () => {
           }} />
           <input type="text" placeholder='Enter the phone number'  onChange={(e)=>{
               SetPhone(e.target.value)
-          }} />
+          }} /> 
         </div>
         <div className="foodimageUpload">
           <h3>Please add 3 images of the food</h3>
+          <div className="DivUpload">
+          <div className="uploadBox">
+            <h4>Upload <br /> Image+</h4>
           <input className='custom-file-input' type="File" onChange={(e)=>{uploadImg(e)}} />
+          </div>
+          <div className="uploadBox">
+            <h4>Upload <br /> Image+</h4>
           <input className='custom-file-input' type="File" onChange={(e)=>{uploadImg(e)}} />
+          </div>
+          <div className="uploadBox">
+            <h4>Upload <br /> Image+</h4>
           <input className='custom-file-input' type="File" onChange={(e)=>{uploadImg(e)}} />
+          </div>
+          </div>
         </div>
         <button className='SubmitContriBtn' onClick={submit}>Submit</button>
       </div>
