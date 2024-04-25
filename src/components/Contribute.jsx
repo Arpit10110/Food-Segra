@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "../style/Contribute.css"
 import contriSection from "../assets/contriSection.png"
 //firbase
+import { useSelector } from 'react-redux'
 import {db} from "../FirebaseConfig"
 import {addDoc,collection} from "firebase/firestore"
 import {v4} from "uuid"
