@@ -8,6 +8,8 @@ import {v4} from "uuid"
 import {imgdb} from "../FirebaseConfig"
 import { uploadBytes,ref, getDownloadURL } from 'firebase/storage';
 const Contribute = () => {
+  const {UserName} = useSelector(state=>state.Local);
+  const {UserPhone} = useSelector(state=>state.Local);
   const [FoodName,SetFoodName] =useState("");
   const [Quantity,SetQuantity] =useState("");
   const [FoodTime,SetFoodTime] =useState("");
@@ -18,7 +20,7 @@ const Contribute = () => {
   const uploadImg =(e)=>{
     console.log(e.target.files[0]);
     const img=ref(imgdb,`images/${v4()}`)
-    uploadBytes(img,e.target.files[0]).then(data=>{
+    uploadBytes(img,e.target.files[0]).then(data=>{ 
       getDownloadURL(data.ref).then(val=>{
         console.log("Image Uploadeded")
         SetImage(prevState => [...prevState, val])
@@ -27,11 +29,12 @@ const Contribute = () => {
   }
   const submit =()=>{
       const contriDetail={
+        UserName:UserName,
         FoodName:FoodName,
         Quantity:Quantity,
         FoodTime:FoodTime,
         Address:Address,
-        Phone:Phone,
+        Phone:UserPhone,
         Image:Image
       }
       addDoc(CreateCollection,contriDetail)
@@ -54,9 +57,6 @@ const Contribute = () => {
           <input type="text" placeholder='Enter the pick-up address'  onChange={(e)=>{
               SetAddress(e.target.value)
           }} />
-          <input type="text" placeholder='Enter the phone number'  onChange={(e)=>{
-              SetPhone(e.target.value)
-          }} /> 
         </div>
         <div className="foodimageUpload">
           <h3>Please add 3 images of the food</h3>
